@@ -16,6 +16,7 @@ let highScoreNumber = +localStorage.getItem('highScore') || 0;
 
 // ^ functions
 function reset() {
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
   highScoreNumber = +localStorage.getItem('highScore') || 0;
   highScore.textContent = highScoreNumber;
   scoreNumber = 20;
