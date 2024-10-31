@@ -63,10 +63,14 @@ function tryGuess() {
     message.textContent = '🔢 Enter A Number!';
   }
 }
+function guessInputHandler() {
+  if (this.value < 0) this.value = '';
+}
 
 // ^ initial game
 reset();
 
 // ^ event listeners
+guessNumberInput.addEventListener('input', guessInputHandler);
 checkBtn.addEventListener('click', tryGuess);
 againBtn.addEventListener('click', reset);
